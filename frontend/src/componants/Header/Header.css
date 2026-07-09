@@ -1,0 +1,50 @@
+.header {
+    width: 100%;
+    height: 70vh;
+    background: url("/header_img.png") no-repeat ;
+    background-size: cover;
+    border-radius: 20px;
+    position: relative;
+    margin: 30px auto;
+}
+
+.header-contents {
+    position: absolute;
+    bottom: 50px;
+    left: 60px;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.header-contents h2 {
+    color: #fff;
+    font-size: 55px;
+    font-weight: 600;
+}
+
+.header-contents p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.header-contents button {
+    width: fit-content;
+    padding: 12px 25px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header-contents button:hover {
+    background-color: tomato;
+    color: #fff;
+}
