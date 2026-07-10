@@ -59,3 +59,54 @@
     border: 3px solid tomato;
     padding: 2px;
 }
+
+@media (max-width: 1024px) {
+    .explore-menu {
+        padding: 30px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .explore-menu {
+        padding: 20px 10px;
+        gap: 15px;
+    }
+    .explore-menu h1 {
+        font-size: 26px;
+    }
+    .explore-menu-description {
+        font-size: 14px;
+    }
+    .explore-menu-list {
+        gap: 20px;
+    }
+    .explore-menu-item img {
+        width: 80px;
+        height: 80px;
+    }
+    .explore-menu-item p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .explore-menu {
+        padding: 15px 5px;
+    }
+    .explore-menu h1 {
+        font-size: 22px;
+    }
+    .explore-menu-description {
+        font-size: 13px;
+    }
+    .explore-menu-list {
+        gap: 15px;
+    }
+    .explore-menu-item img {
+        width: 70px;
+        height: 70px;
+    }
+    .explore-menu-item p {
+        font-size: 13px;
+    }
+}

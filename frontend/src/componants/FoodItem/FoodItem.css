@@ -100,3 +100,34 @@
     font-size: 24px;
     font-weight: 700;
 }
+
+@media (max-width: 768px) {
+    .food-item-image {
+        height: 200px;
+    }
+    .food-item-name-rating p {
+        font-size: 20px;
+    }
+    .food-item-price {
+        font-size: 20px;
+    }
+    .food-item-info {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .food-item-image {
+        height: 180px;
+    }
+    .food-item-name-rating p {
+        font-size: 18px;
+    }
+    .food-item-price {
+        font-size: 18px;
+    }
+    .food-item-description {
+        font-size: 13px;
+        min-height: auto;
+    }
+}

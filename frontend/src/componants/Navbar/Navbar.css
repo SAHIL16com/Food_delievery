@@ -85,3 +85,43 @@
     background-color: tomato;
     color: white;
 }
+
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 20px 30px;
+    }
+    .menu-items {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 10px;
+    }
+    .menu-items {
+        display: none;
+    }
+    .logo {
+        width: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 12px 5px;
+    }
+    .logo {
+        width: 110px;
+    }
+    .navbar-right {
+        gap: 15px;
+    }
+    .navbar-right > div {
+        gap: 12px;
+    }
+    .sign-in-btn {
+        padding: 6px 14px;
+        font-size: 13px;
+    }
+}
