@@ -1,7 +1,8 @@
 import mongoose from "mongoose";
 import foodModel from "./models/foodModel.js";
+import 'dotenv/config';
 
-const MONGO_URI = "mongodb+srv://sahil:sahilmishra123@cluster0.hn50xdr.mongodb.net/food-del";
+const MONGO_URI = process.env.MONGO_URI;
 
 const foodItems = [
     {
