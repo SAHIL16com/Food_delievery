@@ -3,7 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'outfit' , 'sans-serif'
+  font-family: 'outfit' , 'sans-serif';
+  scroll-behavior: smooth;
 }
 body{
   min-height: 100vh;
