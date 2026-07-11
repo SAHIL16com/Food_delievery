@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fcfcfc;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  border: none;
+  height: 1.5px;
+  background-color: #a9a9a9;
+}
+
+.app-content {
+  display: flex;
+}
