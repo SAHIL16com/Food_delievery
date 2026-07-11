@@ -3,10 +3,12 @@ import './MyOrders.css'
 import { StoreContext } from '../../context/StoreContext';
 import axios from 'axios';
 import { assets } from '../../assets/assets';
+import { useNavigate } from 'react-router-dom';
 
 const MyOrders = () => {
     const { url, token } = useContext(StoreContext);
     const [data, setData] = useState([]);
+    const navigate = useNavigate();
 
     const fetchOrders = async () => {
         try {
@@ -18,7 +20,12 @@ const MyOrders = () => {
     }
 
     useEffect(() => {
-        if (token) {
+        if (!token) {
+            const storedToken = localStorage.getItem("token");
+            if (!storedToken) {
+                navigate("/");
+            }
+        } else {
             fetchOrders();
         }
     }, [token])
