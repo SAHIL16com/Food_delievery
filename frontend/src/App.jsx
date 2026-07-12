@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
 import Navbar from './componants/Navbar/Navbar.jsx'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home/Home.jsx'
@@ -8,15 +8,16 @@ import Verify from './pages/Verify/Verify.jsx'
 import MyOrders from './pages/MyOrders/MyOrders.jsx'
 import Footer from './componants/Footer/Footer.jsx'
 import LoginPopup from './componants/LoginPopup/LoginPopup.jsx'
+import { StoreContext } from './context/StoreContext.jsx'
 
 const App = () => {
-  const [showLogin, setShowLogin] = useState(false);
+  const { showLogin } = useContext(StoreContext);
   return (
     <>
-      {showLogin ? <LoginPopup setShowLogin={setShowLogin} /> : <> </>}
+      {showLogin ? <LoginPopup /> : <> </>}
 
       <div className='app'>
-        <Navbar setShowLogin={setShowLogin} />
+        <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/cart' element={<Cart />} />

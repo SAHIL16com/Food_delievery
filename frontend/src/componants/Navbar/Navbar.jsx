@@ -4,9 +4,9 @@ import { assets } from '../../assets/assets.js'
 import { Link, useNavigate } from 'react-router-dom'
 import { StoreContext } from '../../context/StoreContext'
 
-const Navbar = ({ setShowLogin }) => {
+const Navbar = () => {
   const [menu, setMenu] = useState("home");
-  const { getTotalCartAmount, token, setToken, setCartItems } = useContext(StoreContext);
+  const { getTotalCartAmount, token, setToken, setCartItems, setShowLogin } = useContext(StoreContext);
   const navigate = useNavigate();
 
   const logout = () => {

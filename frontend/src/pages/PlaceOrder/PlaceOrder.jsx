@@ -5,7 +5,7 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
 const PlaceOrder = () => {
-  const { getTotalCartAmount, token, food_list, cartItems, url } = useContext(StoreContext);
+  const { getTotalCartAmount, token, food_list, cartItems, url, setShowLogin } = useContext(StoreContext);
   const navigate = useNavigate();
 
   const [data, setData] = useState({
@@ -60,7 +60,7 @@ const PlaceOrder = () => {
   useEffect(() => {
     if (!token) {
       navigate('/cart');
-      alert("Please login first to place an order.");
+      setShowLogin(true);
     } else if (getTotalCartAmount() === 0) {
       navigate('/cart');
     }
