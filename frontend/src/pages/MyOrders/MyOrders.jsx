@@ -27,6 +27,8 @@ const MyOrders = () => {
             }
         } else {
             fetchOrders();
+            const interval = setInterval(fetchOrders, 5000);
+            return () => clearInterval(interval);
         }
     }, [token])
 
