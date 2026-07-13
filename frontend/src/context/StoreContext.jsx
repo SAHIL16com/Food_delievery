@@ -9,6 +9,11 @@ const StoreContextProvider = (props) => {
     const [food_list, setFoodList] = useState([]);
     const [showLogin, setShowLogin] = useState(false);
     const [searchQuery, setSearchQuery] = useState("");
+    const [userProfile, setUserProfile] = useState({
+        name: "John Doe",
+        email: "john.doe@example.com",
+        avatar: ""
+    });
 
     const addToCart = async (itemId) => {
         if (!cartItems[itemId]) {
@@ -81,6 +86,18 @@ const StoreContextProvider = (props) => {
                 setToken(localStorage.getItem("token"));
                 await loadCartData(localStorage.getItem("token"));
             }
+            
+            const savedSettings = localStorage.getItem("userSettings");
+            if (savedSettings) {
+                try {
+                    const parsed = JSON.parse(savedSettings);
+                    if (parsed.profile) {
+                        setUserProfile(parsed.profile);
+                    }
+                } catch (e) {
+                    console.error("Failed to parse settings", e);
+                }
+            }
         }
         loadData();
     }, [])
@@ -98,7 +115,9 @@ const StoreContextProvider = (props) => {
         showLogin,
         setShowLogin,
         searchQuery,
-        setSearchQuery
+        setSearchQuery,
+        userProfile,
+        setUserProfile
     }
 
     return (

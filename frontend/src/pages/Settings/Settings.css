@@ -1,0 +1,231 @@
+.settings-page {
+    min-height: 80vh;
+    padding: 50px 10%;
+    background-color: #fcfcfc;
+    color: #323232;
+    display: flex;
+    justify-content: center;
+}
+
+.settings-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.settings-container h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #262626;
+}
+
+.settings-container hr {
+    border: none;
+    height: 1px;
+    background-color: #e2e8f0;
+}
+
+.settings-section {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #e2e8f0;
+}
+
+.settings-section h3 {
+    font-size: 18px;
+    font-weight: 550;
+    color: tomato;
+}
+
+.settings-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.settings-field label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.settings-input, .settings-select {
+    padding: 10px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    outline: none;
+    font-size: 15px;
+    transition: border-color 0.2s ease;
+    width: 100%;
+    max-width: 500px;
+}
+
+.settings-input:focus, .settings-select:focus {
+    border-color: tomato;
+}
+
+.settings-toggle-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.settings-toggle-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.settings-toggle-item span {
+    font-size: 15px;
+    font-weight: 500;
+    color: #2d3748;
+}
+
+.field-desc {
+    font-size: 12px;
+    color: #718096;
+    margin-top: 4px;
+}
+
+/* Custom Toggle Switch */
+.toggle-switch {
+    width: 48px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #cbd5e1;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-switch.active {
+    background-color: tomato;
+}
+
+.toggle-slider {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.toggle-switch.active .toggle-slider {
+    transform: translateX(24px);
+}
+
+/* Actions styling */
+.settings-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.settings-actions button {
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.settings-actions button:active {
+    transform: scale(0.98);
+}
+
+.cancel-btn {
+    background-color: transparent;
+    border: 1px solid #cbd5e1;
+    color: #4a5568;
+}
+
+.cancel-btn:hover {
+    background-color: #f7fafc;
+}
+
+.save-btn {
+    background-color: tomato;
+    border: none;
+    color: #ffffff;
+}
+
+.save-btn:hover {
+    background-color: #e04420;
+}
+
+@media (max-width: 768px) {
+    .settings-page {
+        padding: 30px 5%;
+    }
+    .settings-container {
+        padding: 25px;
+    }
+}
+
+/* Avatar Upload Styling */
+.avatar-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.avatar-preview {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #f3f3f3;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.avatar-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-edit-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    cursor: pointer;
+}
+
+.avatar-preview:hover .avatar-edit-overlay {
+    opacity: 1;
+}
+
+.avatar-edit-overlay span {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+}
