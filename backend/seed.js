@@ -235,7 +235,7 @@ const seedDB = async () => {
     try {
         await mongoose.connect(MONGO_URI);
         console.log("Connected to DB for seeding...");
-        
+
         // Count existing foods
         const count = await foodModel.countDocuments();
         if (count === 0) {
